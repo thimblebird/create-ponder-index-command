@@ -107,6 +107,14 @@ java {
 }
 
 jar {
+	sourceSets {
+		main {
+			resources {
+				exclude '**/*.kra'
+			}
+		}
+	}
+
 	from("LICENSE") {
 		rename { "${it}_${project.archivesBaseName}" }
 	}
